@@ -64,11 +64,17 @@ set smartindent
 
 set shell=/bin/bash               " Some commands seem to have problems with zsh"
 
-set wildignore+=vendor,log,tmp,*.swp
-" Useful status information at bottom of screen
+set spl=en_us spell               " Enable spell checker
+
+set wildignore+=vendor,log,tmp,*.swp  " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
+nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
+set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
+set list!
+
 " Or use vividchalk
-colorscheme github
+colorscheme blackboard
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -84,7 +90,7 @@ map <leader>T :CommandT<cr>
 map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\
 map <Leader>R <Plug>RubyFileRun " change from <Leader>T to <Leader>]
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-"
+
 " Get rid of awkward Ex-mode
 map Q <Esc>
 
@@ -110,3 +116,25 @@ imap <C-l> <space>=><space>
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 let g:rubycomplete_rails = 1
+
+"display Syntax Errors
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+
+" Clear white spaces
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap _= :call Preserve("normal gg=G")<CR>
+

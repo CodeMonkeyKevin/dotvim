@@ -8,10 +8,3 @@ task :link do
   end
   FileUtils.ln_s("#{current_dir}", "#{ENV["HOME"]}/.vim")
 end
-
-task :build do
-  Dir.chdir('bundle/command-t/ruby/command-t') do
-    `ruby extconf.rb`
-    `make`
-  end
-end
