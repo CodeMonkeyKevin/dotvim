@@ -73,8 +73,7 @@ nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
 set list!
 
-" Or use vividchalk
-colorscheme blackboard
+colorscheme wombat256mod          " Set theme
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -86,7 +85,7 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-map <leader>T :CommandT<cr>
+"map <leader>T :CommandT<cr>
 map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\
 map <Leader>R <Plug>RubyFileRun " change from <Leader>T to <Leader>]
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
@@ -98,13 +97,6 @@ imap <C-l> <space>=><space>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby set foldmethod=syntax
