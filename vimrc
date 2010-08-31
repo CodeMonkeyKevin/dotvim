@@ -1,5 +1,3 @@
-" Copy or symlink to ~/.vimrc or ~/_vimrc.
-
 set nocompatible                  " Must come first because it changes other options.
 
 
@@ -53,10 +51,10 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-" UNCOMMENT TO USE
-set tabstop=2                    " Global tab width.
-set shiftwidth=2                 " And again, related.
-set expandtab                    " Use spaces instead of tabs
+" Tab and indent settings
+set tabstop=2                     " Global tab width.
+set shiftwidth=2                  " And again, related.
+set expandtab                     " Use spaces instead of tabs
 set smarttab
 set laststatus=2                  " Show the status line all the time
 set autoindent
@@ -69,7 +67,7 @@ set spl=en_us spell               " Enable spell checker
 set wildignore+=vendor,log,tmp,*.swp  " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
+" nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
 set list!
 
