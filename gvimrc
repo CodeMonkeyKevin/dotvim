@@ -7,7 +7,7 @@ set guioptions-=T                 " Hide toolbar.
 set guioptions-=L
 set guioptions+=r
 set background=light              " Background.
-set lines=70 columns=150          " Window dimensions.
+set lines=50 columns=151          " Window dimensions.
 
 set fuoptions=maxvert,maxhorz
 map <leader>f :set invfullscreen<CR>
