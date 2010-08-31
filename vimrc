@@ -73,7 +73,7 @@ nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
 set list!
 
-colorscheme wombat256mod          " Set theme
+colorscheme vividchalk            " Set theme
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -95,9 +95,6 @@ map Q <Esc>
 
 imap <C-l> <space>=><space>
 
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
-
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby set foldmethod=syntax
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
@@ -105,11 +102,22 @@ imap <C-l> <space>=><space>
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 " autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+set backupdir=~/.backup,.
+set directory=~/.backup,~/.tmp,.
+
+let g:yankring_history_file = '.backup/yankring'          " Yankring History File Location
+
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
-let g:rubycomplete_rails = 1
+" Auto complete for ruby files
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"improve autocomplete menu color
+"highlight Pmenu ctermbg=238 gui=bold
 
-"display Syntax Errors
+" display Syntax Errors
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -130,3 +138,6 @@ endfunction
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
+nmap <leader>t :NERDTreeToggle<CR>
+
+cd ~/Code                    " Set dir
