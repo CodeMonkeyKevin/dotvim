@@ -62,7 +62,7 @@ if has("gui_running")
   highlight link rubyStringDelimiter rubyString
   highlight link rubyInclude Keyword
   highlight link rubyAttribute Keyword
-  highlight link rubyInstanceVariable Normal
+  highlight rubyInstanceVariable guifg=#3B5CA8
 
   "Rails Colors
   highlight link railsMethod Type
