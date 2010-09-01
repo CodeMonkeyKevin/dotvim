@@ -102,11 +102,12 @@ else
 endif
 highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
 highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
-"if &t_Co == 256
-    "highlight StatusLine ctermbg=117
-"else
-    "highlight StatusLine ctermbg=43
-"endif
+
+if &t_Co == 256
+    highlight StatusLine ctermbg=117
+else
+    highlight StatusLine ctermbg=43
+endif
 
 highlight Ignore        ctermfg=Black
 highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
