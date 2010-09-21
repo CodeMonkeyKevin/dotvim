@@ -14,6 +14,7 @@ filetype plugin indent on         " Turn on file type detection.
 syntax enable                     " Turn on syntax highlighting.
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
+set modelines=0
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -32,6 +33,7 @@ set smartcase                     " But case-sensitive if expression contains a 
 
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
+set cursorline
 
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
@@ -60,12 +62,36 @@ set laststatus=2                  " Show the status line all the time
 set autoindent
 set smartindent
 
+set encoding=utf-8
+
 set shell=/bin/bash               " Some commands seem to have problems with zsh"
 
 set spl=en_us spell               " Enable spell checker
 
 set wildignore+=vendor,log,tmp,*.swp  " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
+let mapleader = ","               " Change leader to ,
+
+" Better regexp search
+nnoremap / /\v
+vnoremap / /\v
+set gdefault
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" No more arrow keys to move around
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 " nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
@@ -137,5 +163,19 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
 nmap <leader>t :NERDTreeToggle<CR>
+
+" Remove Trailing Whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Faster Ack search
+nnoremap <leader>a :Ack
+
+" html fold tag
+nnoremap <leader>ft Vatzf
+
+" Hard wrap
+nnoremap <leader>q gqip
+
+inoremap jj <ESC>
 
 cd ~/Code                    " Set dir
