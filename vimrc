@@ -68,7 +68,7 @@ set shell=/bin/bash               " Some commands seem to have problems with zsh
 
 set spl=en_us spell               " Enable spell checker
 
-set wildignore+=vendor,log,tmp,*.swp  " Useful status information at bottom of screen
+set wildignore+=log,tmp,*.swp  " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 let mapleader = ","               " Change leader to ,
@@ -97,7 +97,7 @@ nnoremap k gk
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
 set list!
 
-colorscheme vividchalk            " Set theme
+colorscheme ir_black            " Set theme
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -110,7 +110,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 "map <leader>T :CommandT<cr>
-map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\
+" map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\\
 map <Leader>R <Plug>RubyFileRun " change from <Leader>T to <Leader>]
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
