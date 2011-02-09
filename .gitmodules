@@ -15,4 +15,22 @@
 	url = git://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/tpope-vim-rake"]
 	path = bundle/tpope-vim-rake
-	url = git://github.com/tpope/vim-rake.git
+  url = git://github.com/tpope/vim-rake.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+  url = http://github.com/msanders/snipmate.vim.git
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+  url = http://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+  url = http://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-conque"]
+	path = bundle/vim-conque
+  url = http://github.com/rson/vim-conque.git
+[submodule "bundle/vim-rspec"]
+	path = bundle/vim-rspec
+  url = http://github.com/taq/vim-rspec.git
+[submodule "bundle/vimerl"]
+	path = bundle/vimerl
+	url = http://github.com/oscarh/vimerl.git
