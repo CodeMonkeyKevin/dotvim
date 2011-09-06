@@ -1,6 +1,6 @@
 " Vim graphical configuration.
 
-set guifont=Anonymous_Pro:h18     " Font family and font size.
+set guifont=Menlo:h16            " Font family and font size.
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.
@@ -18,5 +18,8 @@ let g:rubytest_cmd_story = "cucumber --no-color %p -n '%c'"
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> <Plug>PeepOpen
-  set transparency=15
+  set transparency=7
+  set background=dark
+  colorscheme solarized            " Set theme"
 endif
+

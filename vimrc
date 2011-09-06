@@ -1,6 +1,5 @@
 set nocompatible                  " Must come first because it changes other options.
 
-
 map <Leader>m <Plug>MakeGreen
 let g:rubytest_in_quickfix = 1
 let g:LustyJugglerSuppressRubyWarning = 1
@@ -15,6 +14,9 @@ syntax enable                     " Turn on syntax highlighting.
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 set modelines=0
+
+" let g:solarized_termcolors=16¬
+" colorscheme solarized
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -71,6 +73,8 @@ set spl=en_us spell               " Enable spell checker
 set wildignore+=log,tmp,*.swp  " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
+set nofoldenable                  " Fuck you auto folding, go suck a dick
+
 let mapleader = ","               " Change leader to ,
 
 " Better regexp search
@@ -96,8 +100,6 @@ nnoremap k gk
 " nmap <leader>l :set list!<CR>     " Shortcut to rapidly toggle `set list`
 set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabstops and EOLs
 set list!
-
-colorscheme ir_black            " Set theme
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -162,7 +164,7 @@ endfunction
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
-nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>t :LustyBufferExplorer<CR>
 
 " Remove Trailing Whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
