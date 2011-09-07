@@ -1,1 +1,1 @@
-../../bundle/msanders-snipmate.vim/after/plugin/snipMate.vim
+../../bundle/snipmate.vim/after/plugin/snipMate.vim

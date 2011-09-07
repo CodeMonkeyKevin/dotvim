@@ -1,0 +1,93 @@
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/conque-shell"]
+	path = bundle/conque-shell
+	url = git://github.com/vim-scripts/Conque-Shell.git
+[submodule "bundle/vim-endwise"]
+	path = bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git
+[submodule "bundle/jquery.vim"]
+	path = bundle/jquery.vim
+	url = git://github.com/nono/jquery.vim.git
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = git://github.com/sjbach/lusty.git
+[submodule "bundle/vim-indent-object"]
+	path = bundle/vim-indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-rake"]
+	path = bundle/vim-rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-align"]
+	path = bundle/vim-align
+	url = git://github.com/tsaleh/vim-align.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
+	url = git://github.com/tpope/vim-git.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = git://github.com/airblade/vim-rooter.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/taglist.vim"]
+	path = bundle/taglist.vim
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/delimit-mate"]
+	path = bundle/delimit-mate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-conque"]
+	path = bundle/vim-conque
+	url = git://github.com/rson/vim-conque.git
+[submodule "bundle/vim-rspec"]
+	path = bundle/vim-rspec
+	url = git://github.com/taq/vim-rspec.git
+[submodule "bundle/vimerl"]
+	path = bundle/vimerl
+	url = git://github.com/oscarh/vimerl.git
