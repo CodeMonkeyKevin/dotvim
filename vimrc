@@ -1,6 +1,5 @@
 set nocompatible                  " Must come first because it changes other options.
 
-map <Leader>m <Plug>MakeGreen
 let g:rubytest_in_quickfix = 1
 let g:LustyJugglerSuppressRubyWarning = 1
 let g:erlangHighlightBif = 1
@@ -102,17 +101,17 @@ set listchars=tab:▸\ ,eol:¬       " Use the same symbols as TextMate for tabs
 set list!
 
 " Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
+"map <leader>tt :tabnew<cr>
+"map <leader>te :tabedit
+"map <leader>tc :tabclose<cr>
+"map <leader>to :tabonly<cr>
+"map <leader>tn :tabnext<cr>
+"map <leader>tp :tabprevious<cr>
+"map <leader>tf :tabfirst<cr>
+"map <leader>tl :tablast<cr>
+"map <leader>tm :tabmove
 "map <leader>T :CommandT<cr>
-map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\\\\
+"map <Leader>r <Plug>RubyTestRun " change from <Leader>t to <Leader>\\\\
 map <Leader>R <Plug>RubyFileRun " change from <Leader>T to <Leader>]
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
