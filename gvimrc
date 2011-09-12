@@ -20,6 +20,6 @@ if has("gui_macvim")
   map <D-t> <Plug>PeepOpen
   set transparency=7
   set background=dark
-  colorscheme solarized            " Set theme"
+  colorscheme idleFingers            " Set theme"
 endif
 

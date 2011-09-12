@@ -11,7 +11,6 @@ hi clear
 if exists("syntax_on")
    syntax reset
 endif
-
 let g:colors_name = "blackboard"
 
 " Colours in use
@@ -30,14 +29,18 @@ if has("gui_running")
   highlight CursorLine guibg=#191E2F
   highlight LineNr guibg=#323232 guifg=#888888
   highlight Folded guifg=#1d2652 guibg=#070a15
-  highlight Pmenu guibg=#84A7C1
   highlight Visual guibg=#283A76
+  highlight WildMenu guifg=#000000 guibg=#ffff00
+
+  " Helps colorize FuzzyFileFinder
+  hi Pmenu                guibg=#999999 guifg=#000000
+  hi PmenuSel             guibg=#333333 guifg=#CCCCCC
 
   "General Colors
   highlight Comment guifg=#AEAEAE
   highlight Constant guifg=#D8FA3C
   highlight Keyword guifg=#FFDE00
-  highlight String guifg=#61CE3C
+  highlight String guifg=#61CE3C guibg=#0d1d07
   highlight Type guifg=#84A7C1
   highlight Identifier guifg=#61CE3C gui=NONE
   highlight Function guifg=#FF5600 gui=NONE
@@ -47,7 +50,7 @@ if has("gui_running")
 
   "Invisible character colors
   highlight NonText guifg=#4a4a59
-  highlight SpecialKey guifg=#4a4a59
+  highlight SpecialKey guifg=#B1B1BE
 
   "HTML Colors
   highlight link htmlTag Type
@@ -62,7 +65,7 @@ if has("gui_running")
   highlight link rubyStringDelimiter rubyString
   highlight link rubyInclude Keyword
   highlight link rubyAttribute Keyword
-  highlight rubyInstanceVariable guifg=#3B5CA8
+  highlight link rubyInstanceVariable Normal
 
   "Rails Colors
   highlight link railsMethod Type
@@ -70,16 +73,6 @@ if has("gui_running")
   "Sass colors
   highlight link sassMixin Keyword
   highlight link sassMixing Constant
-
-  "Outliner colors
-  highlight OL1 guifg=#FF5600
-  highlight OL2 guifg=#61CE3C
-  highlight OL3 guifg=#84A7C1
-  highlight OL4 guifg=#D8FA3C
-  highlight BT1 guifg=#AEAEAE
-  highlight link BT2 BT1
-  highlight link BT3 BT1
-  highlight link BT4 BT1
 
   "Markdown colors
   highlight markdownCode guifg=#61CE3C guibg=#070a15
@@ -91,5 +84,8 @@ if has("gui_running")
   highlight gitcommitWarning guifg=#C23621
   highlight gitcommitBranch guifg=#FFDE00
   highlight gitcommitHeader guifg=#84A7C1
+
+  "Limp
+  "hi BracketsBlock guibg=#222
 
 end
