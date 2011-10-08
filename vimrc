@@ -14,6 +14,21 @@ set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 set modelines=0
 
+if !exists("autocmd_colorscheme_loaded")
+  let autocmd_colorscheme_loaded = 1
+  autocmd ColorScheme * highlight TodoRed      ctermbg=darkgreen guibg=#002b37 ctermfg=LightRed     guifg=#E01B1B
+  autocmd ColorScheme * highlight TodoOrange   ctermbg=darkgreen guibg=#002b37 ctermfg=LightMagenta guifg=#E0841B
+  autocmd ColorScheme * highlight TodoYellow   ctermbg=darkgreen guibg=#002b37 ctermfg=LightYellow  guifg=#E0D91B
+endif
+
+if has("autocmd")
+  if v:version > 701
+    autocmd Syntax * call matchadd('TodoRed',  '\W\zs\(TODO1\)')
+    autocmd Syntax * call matchadd('TodoOrange', '\W\zs\(TODO2\)')
+    autocmd Syntax * call matchadd('ToDoYellow', '\W\zs\(TODO3\)')
+  endif
+endif
+
 " let g:solarized_termcolors=16¬
 " colorscheme solarized
 
