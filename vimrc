@@ -25,12 +25,12 @@ if has("autocmd")
   if v:version > 701
     autocmd Syntax * call matchadd('TodoRed',  '\W\zs\(TODO1\)')
     autocmd Syntax * call matchadd('TodoOrange', '\W\zs\(TODO2\)')
-    autocmd Syntax * call matchadd('ToDoYellow', '\W\zs\(TODO3\)')
+    autocmd Syntax * call matchadd('TodoYellow', '\W\zs\(TODO3\)')
   endif
 endif
 
 " let g:solarized_termcolors=16¬
-" colorscheme solarized
+colorscheme neverland2            " Set theme
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -50,6 +50,7 @@ set smartcase                     " But case-sensitive if expression contains a 
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
 set cursorline
+set numberwidth=5
 
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
@@ -59,7 +60,7 @@ set scrolloff=3                   " Show 3 lines of context around the cursor.
 set linebreak
 set formatoptions=tq
 set wrapmargin=4
-set textwidth=120
+set textwidth=78
 
 set title                         " Set the terminal's title
 
@@ -178,7 +179,7 @@ endfunction
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
-nmap <leader>t :LustyBufferExplorer<CR>
+"nmap <leader>t :LustyBufferExplorer<CR>
 
 " Remove Trailing Whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -193,5 +194,10 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>q gqip
 
 inoremap jj <ESC>
+
+set winwidth=84
+"set winheight=5
+"set winminheight=5
+"set winheight=999
 
 cd ~/Code                    " Set dir
